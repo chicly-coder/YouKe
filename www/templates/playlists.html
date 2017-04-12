@@ -1,0 +1,129 @@
+<ion-view view-title="优恪">
+    <ion-content>
+        <ion-list>
+            <ion-item class="img">
+                <ion-slide-box active-slide="myActiveSlide" auto-play="true" does-continue="true">
+                    <ion-slide>
+                        <div>
+                            <img ng-src="{{list[0].img_uri}}">
+                        </div>
+                    </ion-slide>
+                    <ion-slide>
+                        <div>
+                            <img ng-src="{{list[1].img_uri}}">
+                        </div>
+                    </ion-slide>
+                    <ion-slide>
+                        <div>
+                            <img ng-src="{{list[2].img_uri}}">
+                        </div>
+                    </ion-slide>
+                    <ion-slide>
+                        <div>
+                            <img ng-src="{{list[3].img_uri}}">
+                        </div>
+                    </ion-slide>
+                    <ion-slide>
+                        <div>
+                            <img ng-src="{{list[4].img_uri}}">
+                        </div>
+                    </ion-slide>
+                </ion-slide-box>
+            </ion-item>
+            <ion-item id="aa">
+                <ul>
+                    <li ui-sref=" pages({id:'kNylmZ'}) ">
+                        <img src="https://www.okoer.com/img/fenlei5-mob.png">
+                        <p>{{arr[0].title}}</p>
+                    </li>
+                    <li ui-sref="pages({id:'9nrwmJ'}) ">
+                        <img src="https://www.okoer.com/img/fenlei4-mob.png">
+                        <p>{{arr[1].title}}</p>
+                    </li>
+                    <li ui-sref="pages({id:'pnjXNl'}) ">
+                        <img src="https://www.okoer.com/img/fenlei3-mob.png">
+                        <p>{{arr[2].title}}</p>
+                    </li>
+                    <li ui-sref="pages({id:'WNedmD'})">
+                        <img src="https://www.okoer.com/img/fenlei2-mob.png">
+                        <p>{{arr[3].title}}</p>
+                    </li>
+                    <li ui-sref="pages({id:'kNylmZ'}) ">
+                        <img src="https://www.okoer.com/img/fenlei1-mob.png ">
+                        <p>品牌墙</p>
+                    </li>
+                </ul>
+            </ion-item>
+            <ion-item class="bb ">
+
+                <h2>最新优品</h2>
+                <span>更多></span>
+                <ul>
+                    <li ng-repeat="b in brr " ui-sref="app.single({id:b.id}) ">
+                        <img src="{{b.pic_uri}} " alt=" ">
+                        <div>
+                            <h3>{{b.name | word}}</h3>
+                            <p>{{b.like_count}}人喜欢</p>
+                        </div>
+                    </li>
+                </ul>
+            </ion-item>
+            <ion-item class="bb ">
+                <h2>母婴亲子</h2>
+                <span>更多></span>
+                <ul>
+                    <li ng-repeat="c in crr " ui-sref="app.single({id:c.id}) ">
+                        <img src=" {{c.pic_uri}} " alt=" ">
+                        <div>
+                            <h3>{{c.desc | word}}</h3>
+                            <p>{{c.like_count}}人喜欢</p>
+                        </div>
+                    </li>
+                </ul>
+            </ion-item>
+            <ion-item class="bb ">
+                <h2>美容时尚</h2>
+                <span>更多></span>
+                <ul>
+                    <li ng-repeat="d in drr " ui-sref="app.single({id:d.id}) ">
+                        <img src="{{d.pic_uri}} " alt=" ">
+                        <div>
+                            <h3>{{d.desc | word}}</h3>
+                            <p>{{d.like_count}}人喜欢</p>
+                        </div>
+                    </li>
+                </ul>
+            </ion-item>
+            <ion-item class="bb ">
+                <h2>食品饮料</h2>
+                <span>更多></span>
+                <ul>
+                    <li ng-repeat="e in err " ui-sref="app.single({id:e.id}) ">
+                        <img src="{{e.pic_uri}} " alt=" ">
+                        <div>
+                            <h3>{{e.desc | word}}</h3>
+                            <p>{{e.like_count}}人喜欢</p>
+                        </div>
+                    </li>
+                </ul>
+            </ion-item>
+            <ion-item class="bb ">
+                <h2>居家其他</h2>
+                <span>更多></span>
+                <ul>
+                    <li ng-repeat="f in frr " ui-sref="app.single({id:f.id}) ">
+                        <img src=" {{f.pic_uri}} " alt=" ">
+                        <div>
+                            <h3>{{f.desc | word}}</h3>
+                            <p>{{f.like_count}}人喜欢</p>
+                        </div>
+                    </li>
+                </ul>
+            </ion-item>
+        </ion-list>
+        <footer>
+            <span>微博关注 | 下载APP</span>
+            <p>Copyright ©2015-2016 OKOer Inc.</p>
+        </footer>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,36 @@
+<ion-side-menus enable-menu-with-back-views="false">
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar-stable">
+            <ion-nav-back-button>
+            </ion-nav-back-button>
+
+            <ion-nav-buttons side="left">
+                <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <ion-nav-view name="menuContent"></ion-nav-view>
+    </ion-side-menu-content>
+
+    <ion-side-menu side="left">
+        <ion-header-bar class="bar-stable">
+            <h1 class="title">菜单</h1>
+        </ion-header-bar>
+        <ion-content class="left">
+            <ion-list>
+                <ion-item menu-close ng-click="login()">
+                    <i class="ion-ios-person-outline"></i> 个人
+                </ion-item>
+                <ion-item menu-close href="#/app/search">
+                    <i class="ion-ios-bookmarks-outline"></i> 测评
+                </ion-item>
+                <ion-item menu-close href="#/app/browse">
+                    <i class="ion-ios-paper-outline"></i> 资讯
+                </ion-item>
+                <ion-item menu-close href="#/app/playlists">
+                    <i class="ion-ios-home-outline"></i> 首页
+                </ion-item>
+            </ion-list>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

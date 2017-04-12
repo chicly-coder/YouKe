@@ -1,0 +1,60 @@
+<ion-view view-title="Playlist">
+    <ion-content>
+        <ion-list>
+            <ion-item class="grr">
+                <div>
+                    <img ng-src="{{grr.pic_uri}}" alt="">
+                </div>
+            </ion-item>
+            <ion-item>
+                <h2>{{grr.name}}</h2>
+
+            </ion-item>
+            <ion-item>
+                <p>品牌:{{grr.product_report[0].brand_name}}</p>
+
+            </ion-item>
+            <ion-item>
+                <p>分类:{{grr.product_report[0].category_name}}</p>
+
+            </ion-item>
+            <ion-item>
+                <p>出品:优格出品</p>
+
+            </ion-item>
+            <ion-item>
+                <h2>检测表格</h2>
+            </ion-item>
+            <ion-item class="aa" ng-repeat="j in grr.product_report[0].parameters">
+                <p>{{j.key | word}}</p>
+                <p>{{j.value}}</p>
+            </ion-item>
+            <ion-item class="bb">
+                <h2>采购时间</h2>
+                <p>{{ grr.product_report[0].product_buy_time}}</p>
+                <p>{{ grr.product_report[0].product_buy_details}}</p>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
+<style>
+    .aa {
+        position: relative;
+    }
+    
+    .aa p:nth-child(2) {
+        position: absolute;
+        top: 20px;
+        right: 5%;
+    }
+    
+    .bb {
+        position: relative;
+    }
+    
+    .bb p:nth-child(2) {
+        position: absolute;
+        top: 20px;
+        right: 5%;
+    }
+</style>

@@ -1,0 +1,16 @@
+<ion-view view-title="测评">
+    <ion-content>
+        <ion-list>
+            <ion-item ng-repeat="h in hrr" class="hrr">
+                <div>
+                    <img ng-src="{{h.cover_uri}}">
+                </div>
+                <h4>{{h.title}}</h4>
+                <i>{{h.online_time}}</i>
+                <p><span>{{h.like_count}} </span>点赞/<span>{{h.comment_count}} </span>评论</p>
+            </ion-item>
+        </ion-list>
+        <ion-infinite-scroll on-infinite="loadMore()">
+        </ion-infinite-scroll>
+    </ion-content>
+</ion-view>

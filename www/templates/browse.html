@@ -1,0 +1,18 @@
+<ion-view view-title="资讯">
+    <ion-content>
+        <div class="list">
+
+            <a class="item item-thumbnail-left" href="#" ng-repeat="z in zrr">
+                <img src="{{z.img_uri}}">
+
+                <h2>{{z.title}}</h2>
+
+                <p>{{z.online_time}}</p>
+
+                <p><span>{{z.like_count}}</span> 点赞/ <span>{{z.comment_count}}</span> 评论</p>
+            </a>
+        </div>
+        <ion-infinite-scroll on-infinite="loadMore()">
+        </ion-infinite-scroll>
+    </ion-content>
+</ion-view>
